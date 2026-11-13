@@ -1,0 +1,261 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2026, 7:16:29 PM
+    Author     : Gunn
+*/
+
+
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #f6eee4;
+    color: #5b4636;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fixed Background Decorations */
+.bg-shape {
+    position: fixed;
+    z-index: 0;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bg-shape.top-left {
+    width: 520px;
+    height: 320px;
+    background: #e8d2bf;
+    top: -150px;
+    left: -170px;
+}
+
+.bg-shape.bottom-right {
+    width: 620px;
+    height: 380px;
+    background: #d8bda7;
+    bottom: -200px;
+    right: -200px;
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 65px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Title Design */
+.title-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff8f0;
+    border: 2px dashed #c8a98c;
+    border-radius: 30px;
+    padding: 14px 22px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.title-wrapper h1 {
+    font-size: 2rem;
+    color: #6b4f3b;
+    font-weight: 600;
+}
+
+.flower {
+    font-size: 35px;
+}
+
+/* Subtitle */
+.subtitle {
+    margin: 15px 0 28px;
+    color: #7b6857;
+    font-size: 1rem;
+}
+
+/* Main Card */
+.card {
+    background: #fffaf5;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+    text-align: left;
+    border: 1px solid #ead8c7;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #6b4f3b;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #5b4636;
+    background: #fff;
+    border: 1.5px solid #ddc8b6;
+    border-radius: 14px;
+    outline: none;
+    transition: 0.25s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #b88b6e;
+    box-shadow: 0 0 0 3px rgba(184,139,110,0.18);
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 14px;
+    padding: 13px 20px;
+    background: #b88b6e;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-submit:hover {
+    background: #9f7053;
+}
+
+/* Profile Section Title */
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #6b4f3b;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed #d7bba6;
+}
+
+/* Profile Information */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 48px;
+}
+
+.label {
+    width: 36%;
+    background: #f1e1d3;
+    color: #6b4f3b;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-radius: 12px 0 0 12px;
+}
+
+.value {
+    flex: 1;
+    background: #fff;
+    padding: 12px 14px;
+    border-radius: 0 12px 12px 0;
+    color: #5b4636;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* Back Button */
+.btn-back {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 20px;
+    background: #b88b6e;
+    color: white;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn-back:hover {
+    background: #9f7053;
+}
+
+/* Footer */
+.footer-text {
+    margin-top: 22px;
+    color: #8b7562;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+
+    .container {
+        margin: 35px auto;
+    }
+
+    .title-wrapper {
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .title-wrapper h1 {
+    font-size: 2rem;
+    color: #6b4f3b;
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+
+    .flower {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .label, .value {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
